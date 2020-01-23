@@ -1,6 +1,6 @@
 package com.epam.dao.mapper;
 
-import com.epam.crime.entity.Crime;
+import com.epam.entity.Crime;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

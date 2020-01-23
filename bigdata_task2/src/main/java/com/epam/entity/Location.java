@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Location extends Entity {
    private float latitude;
    private float longitude;
-   private long streetId;
+   private int streetId;
 
     public float getLatitude() {
         return latitude;
@@ -23,11 +23,11 @@ public class Location extends Entity {
         this.longitude = longitude;
     }
 
-    public long getStreetId() {
+    public int getStreetId() {
         return streetId;
     }
 
-    public void setStreetId(long streetId) {
+    public void setStreetId(int streetId) {
         this.streetId = streetId;
     }
 

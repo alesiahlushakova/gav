@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @PropertySource("classpath:database.properties")
-@ComponentScan(basePackages = {"com.epam.crime"})
+@ComponentScan(basePackages = {"com.epam"})
 public class ConnectionConfig {
 
     private static final String USER_PROPERTY_KEY = "db.user";

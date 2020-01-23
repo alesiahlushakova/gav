@@ -7,6 +7,12 @@
     <groupId>groupId</groupId>
     <artifactId>bigdata_task2</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+
+        <sonar.sources>src/main/java</sonar.sources>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.postgresql</groupId>

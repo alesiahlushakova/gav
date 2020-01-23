@@ -1,6 +1,7 @@
 package com.epam.dao.mapper;
 
-import com.epam.crime.entity.Location;
+
+import com.epam.entity.Location;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
@@ -25,7 +26,7 @@ public class LocationMapper implements RowMapper<Location> {
     float longitude = resultSet.getFloat(LONGITUDE_COLUMN_LABEL);
     location.setLongitude(longitude);
 
-    long streetId = resultSet.getInt(STREET_ID_COLUMN_LABEL);
+    int streetId = resultSet.getInt(STREET_ID_COLUMN_LABEL);
     location.setStreetId(streetId);
 
     return location;

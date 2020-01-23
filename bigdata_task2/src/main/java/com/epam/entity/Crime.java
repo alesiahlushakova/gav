@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Crime extends Entity {
     private String category;
     private String locationType;
-    private long locationId;
+    private int locationId;
     private String context;
     private String persistentId;
     private String outcomeStatus;
@@ -28,11 +28,11 @@ public class Crime extends Entity {
         this.locationType = locationType;
     }
 
-    public long getLocationId() {
+    public int getLocationId() {
         return locationId;
     }
 
-    public void setLocationId(long locationId) {
+    public void setLocationId(int locationId) {
         this.locationId = locationId;
     }
 

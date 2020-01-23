@@ -1,5 +1,7 @@
 package com.epam.dao;
 
+import com.epam.entity.Street;
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -7,21 +9,29 @@ import java.net.URLConnection;
 
 public class f {
     public static void main(String[] args) throws Exception {
-        URLConnection connection = new URL("https://data.police.uk/api/crime-categories?date=2011-08").openConnection();
+//        URLConnection connection = new URL("https://data.police.uk/api/crime-categories?date=2011-08").openConnection();
+//
+//        InputStream is = connection.getInputStream();
+//        InputStreamReader reader = new InputStreamReader(is);
+//        char[] buffer = new char[256];
+//        int rc;
+//
+//        StringBuilder sb = new StringBuilder();
+//
+//        while ((rc = reader.read(buffer)) != -1)
+//            sb.append(buffer, 0, rc);
+//
+//        reader.close();
+//
+//        System.out.println(sb);
 
-        InputStream is = connection.getInputStream();
-        InputStreamReader reader = new InputStreamReader(is);
-        char[] buffer = new char[256];
-        int rc;
-
-        StringBuilder sb = new StringBuilder();
-
-        while ((rc = reader.read(buffer)) != -1)
-            sb.append(buffer, 0, rc);
-
-        reader.close();
-
-        System.out.println(sb);
+//        Street street = new Street();
+//        street.setId(2);
+//        street.setName("meow");
+//
+//        StreetDAO streetDAO= new StreetDAO();
+//       boolean v = streetDAO.insert(street);
+//        System.out.println(v);
     }
 
 }
