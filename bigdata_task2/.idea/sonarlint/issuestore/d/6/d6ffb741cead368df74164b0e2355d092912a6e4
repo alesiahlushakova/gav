@@ -1,0 +1,13 @@
+
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‰Ãé8ØØ£šý-
+Qsquid:S1068".Remove this unused "locationId" private field.(Ôú¯°øÿÿÿÿ8æÕ¢šý-
+Osquid:S1068",Remove this unused "category" private field.(‘Ñ¤’üÿÿÿÿ8æÕ¢šý-
+Nsquid:S1068"0Remove this unused "persistentId" private field.(¯°à8æÕ¢šý-
+Nsquid:S1068"0Remove this unused "locationType" private field.(³¸Úÿ8æÕ¢šý-
+Fsquid:S11485"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8š›´šý-
+isquid:CommentedOutCodeLine""<This block of commented-out lines of code should be removed.(²Á“Ÿ8š›´šý-
+Lsquid:S1068")Remove this unused "month" private field.(æ£Šûøÿÿÿÿ8æÕ¢šý-
+Osquid:S1068"1Remove this unused "outcomeStatus" private field.(°ìË·8æÕ¢šý-
+Vsquid:S1068"3Remove this unused "locationSubtype" private field.(Ä¾Þ½ûÿÿÿÿ8æÕ¢šý-
+Isquid:S1068"+Remove this unused "context" private field.(šÆùì8æÕ¢šý-
+Ÿsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(©íº8æÕ¢šý-

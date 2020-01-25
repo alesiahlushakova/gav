@@ -8,6 +8,11 @@
             <set />
           </value>
         </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/a.sql">
           <value>
             <set />
@@ -93,6 +98,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/epam/dto/Crime.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/epam/dto/Example.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/epam/dto/Location.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/epam/dto/Street.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/epam/entity/Crime.java">
           <value>
             <set />
@@ -104,6 +129,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/epam/entity/Location.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/epam/entity/Street.java">
           <value>
             <set />
           </value>

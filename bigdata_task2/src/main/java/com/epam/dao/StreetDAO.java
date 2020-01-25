@@ -9,20 +9,22 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-//@Repository
+
 public class StreetDAO implements DAO<Street> {
-//    @Autowired
-//    private JdbcTemplate jdbcTemplate;
+
 
     private static final String INSERT_QUERY = "INSERT INTO street (id, name) VALUES (?,?)";
+    private static final String SELECT_QUERY = "SELECT id, name FROM street";
 
     public StreetDAO() {
     }
 @Override
     public boolean insert(Street street) throws DAOException {
-       // return jdbcTemplate.update(INSERT_QUERY, street.getId(), street.getName()) > 0;
             boolean isSuccess = false;
             try (Connection con = DataSource.getConnection();
                  PreparedStatement pst = con.prepareStatement(INSERT_QUERY);
@@ -38,5 +40,25 @@ public class StreetDAO implements DAO<Street> {
             }
             return isSuccess;
 
+    }
+//@Override
+    public  List<Street> select() throws DAOException{
+        List<Street> streets = null;
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement pst = con.prepareStatement(SELECT_QUERY);
+             ResultSet rs = pst.executeQuery();) {
+            streets = new ArrayList<Street>();
+            Street street;
+            while (rs.next()) {
+                street = new Street();
+                street.setId(rs.getInt("id"));
+                street.setName(rs.getString("name"));
+
+                streets.add(street);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return streets;
     }
 }

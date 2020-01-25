@@ -22,16 +22,13 @@ public class CrimeDAO implements DAO<Crime>{
     private String outcomeStatus;
     private String locationSubtype;
     private String month;
-    private static final String INSERT_QUERY = "INSERT INTO crime (id, category, locationType, locationId, context,"
-           + " persistentId, outcomeStatus, locationSubtype, month) VALUES (?,?,?,?,?,?,?,?,?)";
+    private static final String INSERT_QUERY = "INSERT INTO crime (id, category, location_type, location_id, context,"
+           + " persistent_id, outcome_status, location_subtype, month) VALUES (?,?,?,?,?,?,?,?,?)";
 
     public CrimeDAO() {
     }
 @Override
     public boolean insert(Crime crime) throws DAOException {
-//        return jdbcTemplate.update(INSERT_QUERY, crime.getId(), crime.getCategory(), crime.getLocationType(),
-//                crime.getLocationId(), crime.getOutcomeStatus(), crime.getLocationSubtype(),
-//                crime.getMonth()) > 0;
         boolean isSuccess = false;
         try (Connection con = DataSource.getConnection();
              PreparedStatement pst = con.prepareStatement(INSERT_QUERY);
@@ -42,7 +39,7 @@ public class CrimeDAO implements DAO<Crime>{
             pst.setInt(4, crime.getLocationId());
             pst.setString(5, crime.getContext());
             pst.setString(6, crime.getPersistentId());
-            pst.setString(7, crime.getOutcomeStatus());
+            pst.setObject(7, crime.getOutcomeStatus());
             pst.setString(8, crime.getLocationSubtype());
             pst.setString(9, crime.getMonth());
             int rs = pst.executeUpdate();

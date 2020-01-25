@@ -1,16 +1,51 @@
+
 package com.epam.entity;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
 
-public class Crime extends Entity {
+
+public class Crime {
+
+    @SerializedName("category")
+    @Expose
     private String category;
+    @SerializedName("location_type")
+    @Expose
     private String locationType;
-    private int locationId;
+    @SerializedName("location")
+    @Expose
+    private Location location;
+    @SerializedName("context")
+    @Expose
     private String context;
+    @SerializedName("outcome_status")
+    @Expose
+    private Object outcomeStatus;
+    @SerializedName("persistent_id")
+    @Expose
     private String persistentId;
-    private String outcomeStatus;
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+    @SerializedName("location_subtype")
+    @Expose
     private String locationSubtype;
+    @SerializedName("month")
+    @Expose
     private String month;
+
+    public int getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(int locationId) {
+        this.locationId = locationId;
+    }
+
+    private int locationId;
 
     public String getCategory() {
         return category;
@@ -28,12 +63,12 @@ public class Crime extends Entity {
         this.locationType = locationType;
     }
 
-    public int getLocationId() {
-        return locationId;
+    public Location getLocation() {
+        return location;
     }
 
-    public void setLocationId(int locationId) {
-        this.locationId = locationId;
+    public void setLocation(Location location) {
+        this.location = location;
     }
 
     public String getContext() {
@@ -44,12 +79,28 @@ public class Crime extends Entity {
         this.context = context;
     }
 
-    public String getOutcomeStatus() {
+    public Object getOutcomeStatus() {
         return outcomeStatus;
     }
 
-    public void setOutcomeStatus(String outcomeStatus) {
+    public void setOutcomeStatus(Object outcomeStatus) {
         this.outcomeStatus = outcomeStatus;
+    }
+
+    public String getPersistentId() {
+        return persistentId;
+    }
+
+    public void setPersistentId(String persistentId) {
+        this.persistentId = persistentId;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getLocationSubtype() {
@@ -68,13 +119,6 @@ public class Crime extends Entity {
         this.month = month;
     }
 
-    public String getPersistentId() {
-        return persistentId;
-    }
-
-    public void setPersistentId(String persistentId) {
-        this.persistentId = persistentId;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -82,18 +126,20 @@ public class Crime extends Entity {
         if (!(o instanceof Crime)) return false;
         Crime crime = (Crime) o;
         return getLocationId() == crime.getLocationId() &&
-                getCategory().equals(crime.getCategory()) &&
-                getLocationType().equals(crime.getLocationType()) &&
-                getContext().equals(crime.getContext()) &&
+                Objects.equals(getCategory(), crime.getCategory()) &&
+                Objects.equals(getLocationType(), crime.getLocationType()) &&
+                Objects.equals(getLocation(), crime.getLocation()) &&
+                Objects.equals(getContext(), crime.getContext()) &&
+                Objects.equals(getOutcomeStatus(), crime.getOutcomeStatus()) &&
                 Objects.equals(getPersistentId(), crime.getPersistentId()) &&
-                getOutcomeStatus().equals(crime.getOutcomeStatus()) &&
-                getLocationSubtype().equals(crime.getLocationSubtype()) &&
-                getMonth().equals(crime.getMonth());
+                Objects.equals(getId(), crime.getId()) &&
+                Objects.equals(getLocationSubtype(), crime.getLocationSubtype()) &&
+                Objects.equals(getMonth(), crime.getMonth());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getCategory(), getLocationType(), getLocationId(), getContext(), getPersistentId(), getOutcomeStatus(), getLocationSubtype(), getMonth());
+        return Objects.hash(getCategory(), getLocationType(), getLocation(), getContext(), getOutcomeStatus(), getPersistentId(), getId(), getLocationSubtype(), getMonth(), getLocationId());
     }
 
     @Override
@@ -101,12 +147,14 @@ public class Crime extends Entity {
         return "Crime{" +
                 "category='" + category + '\'' +
                 ", locationType='" + locationType + '\'' +
-                ", locationId=" + locationId +
+                ", location=" + location +
                 ", context='" + context + '\'' +
+                ", outcomeStatus=" + outcomeStatus +
                 ", persistentId='" + persistentId + '\'' +
-                ", outcomeStatus='" + outcomeStatus + '\'' +
+                ", id=" + id +
                 ", locationSubtype='" + locationSubtype + '\'' +
                 ", month='" + month + '\'' +
+                ", locationId=" + locationId +
                 '}';
     }
 }

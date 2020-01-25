@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f982ab3-7667-4119-b4e8-3ff83f0075ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/config/DataSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/dao/CrimeDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/dao/DAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/dao/DAOException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/dao/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/dao/LocationDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/dao/StreetDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bigdata_task2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bigdata_task2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/config/ConnectionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/config/ConnectionConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/dao/f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/dao/f.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/dao/mapper/CrimeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/dao/mapper/CrimeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/dao/mapper/LocationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/dao/mapper/LocationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/dao/mapper/StreetMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/dao/mapper/StreetMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/entity/Crime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/entity/Crime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/entity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/entity/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/entity/Location.java" afterDir="false" />
-    </list>
+    <list default="true" id="7f982ab3-7667-4119-b4e8-3ff83f0075ad" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,19 +19,36 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="task2@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="task2@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1WnKONGleJp3jYsLjqmsjxafEVW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -66,19 +57,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/epam/entity" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="A:\gav\bigdata_task2\src\main\resources" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="A:\alesia_hlushakova_bigdatalab\Task2\bigdata_task2\src\main\java\com\epam\entity" />
+      <recent name="A:\alesia_hlushakova_bigdatalab\Task2\bigdata_task2\src\main\java\com\epam\dto" />
       <recent name="A:\gav\bigdata_task2\src\main\resources" />
       <recent name="A:\bigdata_task2\src\com\epam" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="A:\gav\bigdata_task2\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -93,7 +86,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.f">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.epam.dao.Demo" />
       <module name="bigdata_task2" />
@@ -132,6 +125,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.f" />
         <item itemvalue="Application.Demo" />
       </list>
@@ -144,12 +138,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bad33c8e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a4fe9bce" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bad33c8e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@109beba0" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a4fe9bce" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@70fa482a" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -169,7 +163,9 @@
       <updated>1579779885601</updated>
       <workItem from="1579779889031" duration="242000" />
       <workItem from="1579780730686" duration="1019000" />
-      <workItem from="1579791719512" duration="6602000" />
+      <workItem from="1579791719512" duration="7637000" />
+      <workItem from="1579881908123" duration="5962000" />
+      <workItem from="1579888718460" duration="17700000" />
     </task>
     <servers />
   </component>
@@ -193,9 +189,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/epam/dao/f.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/epam/Main.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

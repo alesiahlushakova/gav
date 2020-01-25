@@ -1,8 +1,8 @@
 package com.epam.dao;
 
-import com.epam.entity.Entity;
 
-public interface DAO<T extends Entity> {
+
+public interface DAO<T > {
     boolean insert(T entity) throws DAOException;
-
+    //List<T> select() throws DAOException;
 }

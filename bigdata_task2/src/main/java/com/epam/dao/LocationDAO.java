@@ -2,10 +2,6 @@ package com.epam.dao;
 
 import com.epam.config.DataSource;
 import com.epam.entity.Location;
-import com.epam.entity.Street;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,35 +10,55 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Repository
+
 public class LocationDAO implements DAO<Location>{
-//    @Autowired
-//    private JdbcTemplate jdbcTemplate;
 
-    private static final String INSERT_QUERY = "INSERT INTO location (id, latitude, longitude, street_id) VALUES (?,?,?,?)";
 
+    private static final String INSERT_QUERY = "INSERT INTO location ( latitude, longitude, street_id) VALUES (?,?,?)";
+    private static final String SELECT_QUERY = "SELECT id, latitude, longitude, street_id FROM street";
     public LocationDAO() {
     }
 
 @Override
     public boolean insert(Location location) throws DAOException {
-//        return jdbcTemplate.update(INSERT_QUERY, location.getId(), location.getLatitude(), location.getLongitude(),
-//                location.getStreetId()) > 0;
         boolean isSuccess = false;
         try (Connection con = DataSource.getConnection();
              PreparedStatement pst = con.prepareStatement(INSERT_QUERY);
            ) {
-            pst.setInt(1, location.getId());
-            pst.setFloat(2, location.getLatitude());
-            pst.setFloat(3, location.getLongitude());
-            pst.setInt(4, location.getStreetId());
+
+            pst.setFloat(1, location.getLatitude());
+            pst.setFloat(2, location.getLongitude());
+            pst.setInt(3, location.getStreet().getId());
             int rs = pst.executeUpdate();
+            int x = 0;
            if (rs > 0) {
+
                isSuccess = true;
            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return isSuccess;
+    }
+
+   // @Override
+    public  List<Location> select() throws DAOException{
+        List<Location> streets = null;
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement pst = con.prepareStatement(SELECT_QUERY);
+             ResultSet rs = pst.executeQuery();) {
+            streets = new ArrayList<Location>();
+            Location street;
+            while (rs.next()) {
+                street = new Location();
+                street.setId(rs.getInt("id"));
+                street.setLatitude(rs.getFloat("latitude"));
+                street.setLongitude(rs.getFloat("longitude"));
+                streets.add(street);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return streets;
     }
 }
