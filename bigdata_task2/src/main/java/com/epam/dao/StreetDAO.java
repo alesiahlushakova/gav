@@ -36,7 +36,7 @@ public class StreetDAO implements DAO<Street> {
                     isSuccess = true;
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                throw new DAOException("Exception during street insertion");
             }
             return isSuccess;
 
@@ -57,7 +57,7 @@ public class StreetDAO implements DAO<Street> {
                 streets.add(street);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new DAOException("Exception during street selection");
         }
         return streets;
     }

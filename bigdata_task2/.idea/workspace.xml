@@ -165,7 +165,7 @@
       <workItem from="1579780730686" duration="1019000" />
       <workItem from="1579791719512" duration="7637000" />
       <workItem from="1579881908123" duration="5962000" />
-      <workItem from="1579888718460" duration="17700000" />
+      <workItem from="1579888718460" duration="29173000" />
     </task>
     <servers />
   </component>
@@ -190,8 +190,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/Main.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="10" />
+          <line>67</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

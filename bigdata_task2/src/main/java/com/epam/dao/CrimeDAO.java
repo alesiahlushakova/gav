@@ -2,28 +2,14 @@ package com.epam.dao;
 
 import com.epam.config.DataSource;
 import com.epam.entity.Crime;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-//@Repository
 public class CrimeDAO implements DAO<Crime>{
-//    @Autowired
-//    private JdbcTemplate jdbcTemplate;
-    private String category;
-    private String locationType;
-    private long locationId;
-    private String context;
-    private String persistentId;
-    private String outcomeStatus;
-    private String locationSubtype;
-    private String month;
+
     private static final String INSERT_QUERY = "INSERT INTO crime (id, category, location_type, location_id, context,"
-           + " persistent_id, outcome_status, location_subtype, month) VALUES (?,?,?,?,?,?,?,?,?)";
+           + " persistent_id, outcome_status_id, location_subtype, month) VALUES (?,?,?,?,?,?,?,?,?)";
 
     public CrimeDAO() {
     }
@@ -39,7 +25,7 @@ public class CrimeDAO implements DAO<Crime>{
             pst.setInt(4, crime.getLocationId());
             pst.setString(5, crime.getContext());
             pst.setString(6, crime.getPersistentId());
-            pst.setObject(7, crime.getOutcomeStatus());
+            pst.setInt(7, crime.getOutcomeStatusId());
             pst.setString(8, crime.getLocationSubtype());
             pst.setString(9, crime.getMonth());
             int rs = pst.executeUpdate();
@@ -47,7 +33,7 @@ public class CrimeDAO implements DAO<Crime>{
                 isSuccess = true;
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new DAOException("Exception during outcome status insertion");
         }
         return isSuccess;
     }

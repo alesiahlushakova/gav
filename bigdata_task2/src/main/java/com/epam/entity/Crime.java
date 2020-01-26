@@ -23,7 +23,7 @@ public class Crime {
     private String context;
     @SerializedName("outcome_status")
     @Expose
-    private Object outcomeStatus;
+    private OutcomeStatus outcomeStatus;
     @SerializedName("persistent_id")
     @Expose
     private String persistentId;
@@ -36,6 +36,16 @@ public class Crime {
     @SerializedName("month")
     @Expose
     private String month;
+
+    public int getOutcomeStatusId() {
+        return outcomeStatusId;
+    }
+
+    public void setOutcomeStatusId(int outcomeStatusId) {
+        this.outcomeStatusId = outcomeStatusId;
+    }
+
+    private int outcomeStatusId;
 
     public int getLocationId() {
         return locationId;
@@ -79,11 +89,11 @@ public class Crime {
         this.context = context;
     }
 
-    public Object getOutcomeStatus() {
+    public OutcomeStatus getOutcomeStatus() {
         return outcomeStatus;
     }
 
-    public void setOutcomeStatus(Object outcomeStatus) {
+    public void setOutcomeStatus(OutcomeStatus outcomeStatus) {
         this.outcomeStatus = outcomeStatus;
     }
 
