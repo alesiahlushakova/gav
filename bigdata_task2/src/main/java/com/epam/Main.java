@@ -6,6 +6,7 @@ import com.epam.entity.Crime;
 import com.epam.entity.Location;
 import com.epam.entity.OutcomeStatus;
 import com.epam.entity.Street;
+import com.epam.service.CSVParser;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -23,6 +24,7 @@ import java.util.List;
 
 public class Main {
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
+    private static  final String FILE_PATH = "./src/main/resources/LondonStations.csv";
     public static void main(String[] args) throws Exception {
 
 
@@ -44,7 +46,8 @@ public class Main {
 
         System.out.println(sb);
 
-
+     
+        List<Location> products =  new CSVParser().parseProductCsv(FILE_PATH);
         JSONParser parser = new JSONParser();
         JSONArray json = (JSONArray) parser.parse(sb.toString());
 
